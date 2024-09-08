@@ -14,7 +14,7 @@ struct ContentView: View {
             .darkCyan
         ]
     @State var textColor: Color = .deepSkyBlue
-    @State var bgColor: Color = .mediumPurple
+    @State var bgColor: Color = .black
     
     var body: some View {
         VStack {
@@ -50,9 +50,11 @@ struct ContentView: View {
                 },
                 label: {
                     Text("Random Colors")
-                    .foregroundStyle(textColor)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 15).fill(bgColor))
+                        .foregroundStyle(textColor)
+                        .fontWeight(.semibold)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(RoundedRectangle(cornerRadius: 15).fill(bgColor))
             })
         }
         .padding()
