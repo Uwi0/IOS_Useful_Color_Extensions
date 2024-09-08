@@ -1,19 +1,20 @@
-//
-//  ContentView.swift
-//  Useful Color Extensions
-//
-//  Created by dwi prasetyo on 08/09/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            HStack {
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color.red1)
+                .frame(width: 50, height: 50)
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color.cornFlowerBlue)
+                .frame(width: 50, height: 50)
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color.gold)
+                .frame(width: 50, height: 50)
+            }
         }
         .padding()
     }
